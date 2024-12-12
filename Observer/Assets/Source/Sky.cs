@@ -1,18 +1,21 @@
+using Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Sky : IObserver
+namespace space
 {
-    private SkyView _skyView;
-
-    public Sky(SkyView skyView)
+    public class Sky : IObserver
     {
-        _skyView = skyView;
-    }
+        private SkyView _skyView;
 
-    public void Update(float timeOfDay)
-    {
-       _skyView.ChangeColor(timeOfDay);
+        public Sky(SkyView skyView)
+        {
+            _skyView = skyView;
+        }
+
+        public void Update(float timeOfDay)
+        {
+            _skyView.ChangeColor(timeOfDay);
+        }
     }
 }

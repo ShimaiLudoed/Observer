@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public interface IObserver
+namespace Core
 {
-    public void Update(float timeOfDay);
+    public interface IObserver
+    {
+        public void Update(float timeOfDay);
+    }
 }
